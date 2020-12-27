@@ -1,8 +1,8 @@
+Published on [shinyapps.io](https://ashten-anthony.shinyapps.io/ranchi/)
+
 # Ranchi
 
 `Lunch` translates to `Ranchi` in Japanese
-
-Published on [shinyapps.io](https://ashten-anthony.shinyapps.io/ranchi/)
 
 ## What to eat for lunch?
 I live in Malaysia where the variety of food is of abundance. 
