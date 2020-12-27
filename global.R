@@ -4,16 +4,16 @@
 options(shiny.launch.browser = TRUE)
 
 # r packages to load
-rpkgs <- 
-  c("dplyr", "stringr", "shiny", "scales", "shinydashboard", "shinythemes", "shinyWidgets", "shinyjs", 
-    "googledrive", "googlesheets4")
-
-for (pkg in rpkgs){
-  
-  suppressMessages(library(pkg, character.only = T))
-  
-  
-}
+library(dplyr)
+library(stringr)
+library(shiny)
+library(scales)
+library(shinydashboard)
+library(shinythemes)
+library(shinyWidgets)
+library(shinyjs)
+library(googledrive)
+library(googlesheets4)
 
 # theme pallete
 theme_pallete <- 
@@ -21,19 +21,11 @@ theme_pallete <-
 
 scales::show_col(theme_pallete)
 
-# connect to google drive
-drive_auth(email = "ashten28@gmail.com")
-sheets_auth(token = drive_token())
-# drive_find("restaurants")
 
-# get drive location for sheet
-drive_restaurants <- 
-  drive_get("ranchi_data")
+# read data
+places <- read.csv("www/data/places.csv")
 
-# read sheet from google drive location
-places <- 
-  read_sheet(drive_restaurants, sheet = "places")
-
+# filter for restaurants 
 restaurants <-
   places %>% 
   filter(restaurant == 1)
@@ -54,6 +46,8 @@ names(cuisine_list) <-
 
 names(type_list) <- 
   str_to_title(type_list)
+
+
 
 
 

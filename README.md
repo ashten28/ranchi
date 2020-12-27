@@ -2,10 +2,11 @@
 
 `Lunch` translates to `Ranchi` in Japanese
 
+Published on [shinyapps.io](https://ashten-anthony.shinyapps.io/ranchi/)
+
 ## What to eat for lunch?
-I live in Malaysia where the variety of food is of abudance. 
+I live in Malaysia where the variety of food is of abundance. 
 However, ask any Malaysian, they will tell you they face a similar daily question to answer which is "WHAT TO EAT FOR LUNCH?!". 
-I am still not sure why this is the cause but it has to do with us being spoilt with so many choices. 
 
 ## How does Ranchi help?
 To answer this 'massive' question, I decided to build a simple shiny app that makes suggestion on where we should eat. 

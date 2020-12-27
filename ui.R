@@ -12,11 +12,15 @@ fluidPage(useShinyjs(),
                    )
           ),
           
-          br(),
-          br(),
+          fluidRow(
+            column(12, align = 'right',
+                   a("Add more restaurants here", href = "https://docs.google.com/spreadsheets/d/1NgSBO6L0MkMbioPnE2F4sJaXUVd-aN2HMKWEfRc5OSU/edit?usp=sharing"),
+                   
+                   )
+          ),
           
           fluidRow(
-            column(6, 
+            column(12, 
                    wellPanel(
                      fluidRow(
                        column(11, 
@@ -26,7 +30,7 @@ fluidPage(useShinyjs(),
                      ),
                      br(),
                      fluidRow(
-                       column(2, 
+                       column(3, 
                               pickerInput(
                                 # width = "100%",
                                 inputId = "location",
@@ -40,7 +44,7 @@ fluidPage(useShinyjs(),
                               )
                        ),
                        
-                       column(2, 
+                       column(3, 
                               pickerInput(
                                 # width = "100%",
                                 inputId = "cuisine",
@@ -53,7 +57,7 @@ fluidPage(useShinyjs(),
                               )
                        ),
                        
-                       column(2, 
+                       column(3, 
                               pickerInput(
                                 # width = "100%",
                                 inputId = "type",
@@ -66,10 +70,12 @@ fluidPage(useShinyjs(),
                               )
                        ),
                        
-                       column(2, style = "margin-top:23px", 
+                       column(3, style = "margin-top:23px", 
                               actionButton(
                                 inputId = "suggest_random", label = "Suggest!", icon = icon("sign-in-alt"), 
-                                style = "color: #fff; background-color: #364d6e; border-color:#364d6e")
+                                style = "color: #fff; background-color: #364d6e; border-color:#364d6e") 
+                              
+                              
                               
                        )
                        
@@ -81,13 +87,19 @@ fluidPage(useShinyjs(),
                      
                      
                      )
-            ),
+            )
             
-            column(6, 
-                   wellPanel(h3("Smart suggest"))
+            ),
+          
+          fluidRow(
+            column(12, 
+                   wellPanel(
+                     h3("Smart suggest", style = "text-decoration:underline"),
+                     br(),
+                     h5("Coming soon")
+                     )
             )
-              
-            )
+          )
             
             
 )
